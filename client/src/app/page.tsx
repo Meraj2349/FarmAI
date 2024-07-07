@@ -2,6 +2,8 @@
 
 import React from 'react';
 import ReviewCard from '../components/ReviewCard';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const App: React.FC = () => {
   const userData = {
@@ -13,15 +15,20 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="p-4 bg-gray-100 min-h-screen flex items-center justify-center">
-      <ReviewCard
-        name={userData.name}
-        profilePic={userData.profilePic}
-        rating={userData.rating}
-        review={userData.review}
-        date={userData.date}
-      />
+    <div>
+      <Navbar />
+      <div className="p-4 bg-gray-100 min-h-screen flex items-center justify-center">
+        <ReviewCard
+          name={userData.name}
+          profilePic={userData.profilePic}
+          rating={userData.rating}
+          review={userData.review}
+          date={userData.date}
+        />
+      </div>
+      <Footer />
     </div>
+
   );
 };
 
